@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2e19d7ecaf8149498e7ac82626826121" Name="Diagram1">
+        <EntityTypeShape EntityType="YmdbModel.Movie" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="YmdbModel.MovieOrder" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="YmdbModel.UserTable" Width="1.5" PointX="4.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

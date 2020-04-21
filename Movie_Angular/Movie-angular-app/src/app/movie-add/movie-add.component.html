@@ -1,0 +1,30 @@
+
+<h1>welcome, Adding movie admin page</h1> 
+
+<a [routerLink]="['/main-page']" class="btn btn-primary" role="button">back To main</a>
+
+<button [routerLink]="['/admin-page']" type="button" class="btn btn-info">Back to admin page</button>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<form>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Movie Name</label>
+      <input  type="text" class="form-control" name="movie"  placeholder="Movie Name" #ttt/>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Movie Director</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Movie Director" #ttt2/>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Movie Description</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Movie Description"#ttt3/>
+      </div>
+  </form>
+  <br/>
+   <h2>File Upload</h2>
+       <input type="file" (change)="Upload($event)">
+       
+  <button (click)="add(ttt.value,ttt2.value,ttt3.value)"  class="btn btn-primary">Add Movie</button>
+</div>

@@ -1,0 +1,148 @@
+<div class="bb">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <!-- Default form login -->
+        <form class="text-center border border-light p-5" action="#!">
+          <p class="h4 mb-4">Sign in </p>
+          <!-- Email -->
+          <input type="password" #sss1 id="defaultLoginFormPassword" class="form-control mb-4" placeholder="User Name">
+          <!-- Password -->
+          <input type="password" #sss2 id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+          <div class="d-flex justify-content-around">
+          </div>
+          <!-- Sign in button -->
+          <button (click)="SignInn(sss1.value,sss2.value)" class="btn btn-primary btn-block my-4" type="submit">Sign in</button>
+          <!-- Register -->
+          <p>Not a member?
+            <a [routerLink]="['/register']"  role="button">Register</a>
+          </p>
+        </form>
+        <!-- Default form login -->
+
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-10">
+
+        <h1>Welcome to Ymdb, </h1>
+        <h4>hello {{username}} your password is {{password}}</h4>
+        <!-- Search form -->
+        <div class="md-form active-cyan active-cyan-2 mb-3">
+          <input class="form-control" type="text" [(ngModel)]="mainSearch" placeholder="Search your movie"
+            aria-label="Search">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="data:image/jpeg;base64,{{arrMovie[12].Movie_Image_Name}}">
+          <div class="caption">
+            <h3>{{arrMovie[0].Movie_Name}}</h3>
+            <p>{{arrMovie[0].Movie_Description}}</p>
+
+
+            <!--here in the click event--->
+            <p ><a (click)="movieBook(arrMovie[0].Movie_Id,arrMovie[0].Movie_Name)" class="btn btn-primary" role="button">To Movie
+                {{arrMovie[0].Movie_Name}} </a></p>
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <p><img src="data:image/jpeg;base64,{{arrMovie[13].Movie_Image_Name}}"></p>
+            
+          <div class="caption">
+            
+            <h3>{{arrMovie[1].Movie_Name}}</h3>
+            <p>{{arrMovie[1].Movie_Description}}</p>
+            <p><a (click)="movieBook(arrMovie[1].Movie_Id,arrMovie[1].Movie_Name)" class="btn btn-primary" role="button">To Movie
+                {{arrMovie[1].Movie_Name}}</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          
+          <img src="data:image/jpeg;base64,{{arrMovie[14].Movie_Image_Name}}">
+          <div class="caption">
+             <h6>{{arrMovie[2].Movie_Image_Name}}</h6>
+            <h3>{{arrMovie[2].Movie_Name}}</h3>
+            <p>{{arrMovie[2].Movie_Description}}</p>
+            <p><a (click)="movieBook(arrMovie[2].Movie_Id,arrMovie[2].Movie_Name)" class="btn btn-primary" role="button">To Movie {{arrMovie[2].Movie_Name}} </a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- table movie selected -->
+<div>
+  <table *ngIf="arrMovie">
+    <thead>
+      <th>MovieName</th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let i of arrMovie|searchMoviePipes:mainSearch" (click)="selectMovie(i.Movie_Id)">
+        {{i.Movie_Name}}
+        {{i.Movie_Id}}
+      </tr>
+    </tbody>
+  </table>
+
+  <table *ngIf="selectedMovie">
+    <thead>
+      <th>movie id </th>
+      <th>movie name </th>
+      <th>movie director </th>
+      <th>movie description </th>
+      <th>order </th>
+    </thead>
+
+    <tbody>
+      <td>{{selectedMovie.Movie_Id}} </td>
+      <td>{{selectedMovie.Movie_Name}} </td>
+      <td>{{selectedMovie.Movie_Director}} </td>
+      <td>{{selectedMovie.Movie_Description}} </td>
+      <td> <a (click)="movieBook(selectedMovie.Movie_Id,selectedMovie.Movie_Name)" class="btn btn-primary" role="button">To Movie
+          {{selectedMovie.Movie_Name}} </a> </td>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <p> <a [routerLink]="['/admin-page']" class="btn btn-primary" role="button">To admin page</a></p> -->
+
+

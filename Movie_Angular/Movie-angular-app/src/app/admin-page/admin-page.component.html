@@ -1,0 +1,108 @@
+<h1>welcome, to the admin page <a [routerLink]="['/main-page']" class="btn btn-primary" role="button">back To main</a>
+</h1>
+
+
+<button [routerLink]="['/movie-add']" type="button" class="btn btn-info">add movie</button>
+
+
+<!-- table movie selected -->
+<h1 style="text-align: left">Movie List: </h1>
+<div>
+    <table *ngIf="arrMovie">
+        <thead>
+            <th>id </th>
+            <th>movie name </th>
+            <th>movie director </th>
+            <th>movie description </th>
+            <th>Update </th>
+            <th>Delete</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let i of arrMovie">
+                <td>{{i.Movie_Id}}</td>
+                <td>{{i.Movie_Name}}</td>
+                <td>{{i.Movie_Director}}</td>
+                <td>{{i.Movie_Description}}</td>
+                <td><a class="btn btn-success" href="#" role="button" (click)="UpdateMovie(i.Movie_Id,i.Movie_Name,i.Movie_Director,i.Movie_Description)">Update</a></td>
+                <td><a class="btn btn-danger" href="#" role="button" (click)="deleteMovie(i.Movie_Id)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+<!-- table movie orders-->
+
+<h1 style="text-align: left">Movie Orders table:</h1>
+
+<div>
+    <table *ngIf="arrOrders">
+        <thead>
+            <th> order id </th>
+            <th>movie name </th>
+            <th>Number Of Tickets</th>
+            <th>Date </th>
+            <th>Time</th>
+            <th>User Name</th>
+            <th>password</th>
+            <th>update</th>
+            <th>delete</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let i of arrOrders">
+                <td>{{i.OrderId}}</td>
+                <td>{{i.MovieName}}</td>
+                <td>{{i.NumOftickets}}</td>
+                <td>{{i.Date}}</td>
+                <td>{{i.Time}}</td>
+                <td>{{i.UserName}}</td>
+                <td>{{i.Password}}</td>
+
+                <td><a class="btn btn-success" href="#" role="button" (click)="UpdateMovie(i.Movie_Id,i.Movie_Name,i.Movie_Director,i.Movie_Description)">Update</a></td>
+                <td><a class="btn btn-danger" href="#" role="button" (click)="deleteMovie(i.Movie_Id)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<!-- table Users-->
+
+<h1 style="text-align: left">Users table:</h1>
+
+<div>
+    <table *ngIf="arrUsers">
+        <thead>
+            <th> User Id </th>
+            <th>First Name </th>
+            <th>Last Name</th>
+            <th>Credit Card </th>
+            <th>T_Z</th>
+            <th>User Name</th>
+            <th>password</th>
+            <th>update</th>
+            <th>delete</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let i of arrUsers">
+                <td>{{i.User_Id}}</td>
+                <td>{{i.First_Name}}</td>
+                <td>{{i.Last_Name}}</td>
+                <td>{{i.Credit_Card}}</td>
+                <td>{{i.T_Z}}</td>
+                <td>{{i.User_Name}}</td>
+                <td>{{i.Password}}</td>
+
+                <td><a class="btn btn-success" href="#" role="button" (click)="UpdateMovie(i.Movie_Id,i.Movie_Name,i.Movie_Director,i.Movie_Description)">Update</a></td>
+                <td><a class="btn btn-danger" href="#" role="button" (click)="deleteMovie(i.Movie_Id)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

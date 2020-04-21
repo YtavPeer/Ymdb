@@ -1,0 +1,44 @@
+
+.container-fluid{
+    background-color:#90caf9;   
+} 
+
+
+.container{
+    background-color:#ffa000;   
+}
+
+.bb{
+    background-color:#ffa000;   
+}
+
+.thumbnail{
+    background-color: #dee6e1e1;
+}
+
+
+
+
+
+tr:nth-child(even){
+    background-color:#fff;
+}
+tr:nth-child(odd){
+    background-color:#ccc;
+}
+
+*{
+    text-align: center;
+}
+
+table{
+    border: 5x ;
+    padding: 4px;
+    margin: 7px;
+    
+}
+th{
+    text-align: center;
+    background-color: peru;
+    padding: 10px;
+}
