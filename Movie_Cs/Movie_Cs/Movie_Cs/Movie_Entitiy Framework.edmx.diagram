@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2e19d7ecaf8149498e7ac82626826121" Name="Diagram1">
+      <Diagram DiagramId="2e19d7ecaf8149498e7ac82626826121" Name="Diagram1" ZoomLevel="10">
         <EntityTypeShape EntityType="YmdbModel.Movie" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="YmdbModel.MovieOrder" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="YmdbModel.UserTable" Width="1.5" PointX="4.75" PointY="0.75" />

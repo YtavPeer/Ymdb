@@ -53,6 +53,7 @@ export class MovieOrderSerService {
     h = h.append("Authorization", "basic "+user+":"+pass);
 
     console.log(name1, tickets, Date, time, user, pass,h);
+    
     this.http1.post("https://localhost:44352/api/orders",
       { "MovieName": name1, "NumOftickets": tickets, "Date": Date, "Time": time, "UserName": user, "Password": pass},
 

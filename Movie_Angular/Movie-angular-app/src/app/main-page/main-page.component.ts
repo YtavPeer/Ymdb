@@ -47,6 +47,7 @@ password: any = this.ser2.pass1;
 
 
 SignInn(user: string, password: string){
+ 
   if (user == "ytav" && password == "0542772266") {
     alert("hello " + user + " wolcome to your admin")
     this.router.navigate(['/admin-page'])
